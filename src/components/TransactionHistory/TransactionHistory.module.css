@@ -1,0 +1,29 @@
+.transactionHistory {
+  min-width: 40%;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.thead {
+  background-color: #00bcd5;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tableRow {
+  text-align: center;
+  color: #c1c3c6;
+  line-height: 2;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #ecf1f4;
+}
+
+.ttype {
+  text-transform: capitalize;
+}

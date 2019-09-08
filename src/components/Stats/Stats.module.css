@@ -1,0 +1,23 @@
+.statList {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  width: 80px;
+  padding: 5px 0 20px;
+}
+
+.item:nth-child(n + 2) {
+  box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 300;
+  justify-self: flex-start;
+  margin-bottom: 10px;
+}
