@@ -1,39 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import styles from './PrisingItem.module.css';
+import getColor from '../../../helpers/get-pricing-color';
 
-const getColor = el => {
-  let color = '';
-  if (el === 'Bronze') color = '#dc7c4a';
-  if (el === 'Siver') color = '#c0c0c0';
-  if (el === 'Gold') color = '#dda431';
+const IconStyled = styled.i`
+  content: url(${props => props.icon});
+`;
 
-  return color;
-};
+const ButtonStyled = styled.button`
+  background-color: ${props => getColor(props.label)};
+`;
+
+const TitleStyled = styled.h3`
+  color: ${props => getColor(props.label)};
+`;
+
 const PrisingItem = ({ label, icon, capacity, price, description }) => {
   return (
     <div className={styles.pricingItem}>
-      <i className={styles.icon} style={{ content: `url(${icon})` }} />
-      <h3
-        className={styles.label}
-        style={{
-          color: getColor(label),
-        }}
-      >
+      <IconStyled className={styles.icon} icon={icon} />
+      <TitleStyled className={styles.label} label={label}>
         {label}
-      </h3>
+      </TitleStyled>
       <p className={styles.capacity}>{capacity} Storage</p>
       <p className={styles.description}>{description}</p>
       <p className={styles.price}>${price}/MO</p>
-      <button
-        className={styles.button}
-        style={{
-          backgroundColor: getColor(label),
-        }}
-        type="button"
-      >
+      <ButtonStyled className={styles.button} label={label} type="button">
         Get Started
-      </button>
+      </ButtonStyled>
     </div>
   );
 };

@@ -16,16 +16,16 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-.task-container {
+.taskContainer {
   margin-bottom: 25px;
   padding: 25px 0;
 }
 
-.d-flex {
+.dFlex {
   display: flex;
   justify-content: space-around;
 }
 
-.bg-grey {
+.bgGrey {
   background-color: #e7ecf2;
 }
