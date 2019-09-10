@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import styles from './Stats.module.css';
-import Title from './Title/Title';
 import generateRandomColor from '../../helpers/get-random-color';
 
 const LiStyled = styled.li`
@@ -11,10 +10,10 @@ const LiStyled = styled.li`
 
 const Stats = ({ title, stats }) => (
   <section className={styles.statsSection}>
-    <Title title={title} />
+    <h2 className={styles.title}>{title}</h2>
     <ul className={styles.statList}>
       {stats.map(stat => (
-        <LiStyled className={styles.item} key={stat.key}>
+        <LiStyled className={styles.item} key={stat.id}>
           <span className={styles.label}>{stat.label}</span>
           <span className={styles.percentage}>{stat.percentage}%</span>
         </LiStyled>

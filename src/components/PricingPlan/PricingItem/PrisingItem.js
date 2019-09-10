@@ -1,20 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import styles from './PrisingItem.module.css';
-import getColor from '../../../helpers/get-pricing-color';
-
-const IconStyled = styled.i`
-  content: url(${props => props.icon});
-`;
-
-const ButtonStyled = styled.button`
-  background-color: ${props => getColor(props.label)};
-`;
-
-const TitleStyled = styled.h3`
-  color: ${props => getColor(props.label)};
-`;
+import { IconStyled, TitleStyled, ButtonStyled } from './PricingItem.styled';
 
 const PrisingItem = ({ label, icon, capacity, price, description }) => {
   return (

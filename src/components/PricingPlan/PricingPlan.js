@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import PrisingItem from './PricingItem/PrisingItem';
 import styles from './PrisingPlan.module.css';
 
-const PricingPlan = ({ arr }) => {
+const PricingPlan = ({ plans }) => {
   return (
     <ul className={styles.pricingPlan}>
-      {arr.map(plan => (
+      {plans.map(plan => (
         <li key={plan.id} className={styles.item}>
           <PrisingItem {...plan} />
         </li>
@@ -16,7 +16,7 @@ const PricingPlan = ({ arr }) => {
 };
 
 PricingPlan.propTypes = {
-  arr: PropTypes.arrayOf(
+  plans: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
     }),

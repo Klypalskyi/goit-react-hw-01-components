@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './App.module.css';
 import Profile from '../Profile/Profile';
-import Title from '../Stats/Title/Title';
 import Stats from '../Stats/Stats';
 import PricingPlan from '../PricingPlan/PricingPlan';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
@@ -14,7 +13,7 @@ import transactions from '../TransactionHistory/transactions.json';
 const App = () => {
   return (
     <div className="container">
-      <Title title="Profiles Task" />
+      <h2 className={styles.title}>Profiles Task</h2>
       <div
         className={`${styles.taskContainer} ${styles.dFlex} ${styles.bgGrey}`}
       >
@@ -26,11 +25,11 @@ const App = () => {
         <Stats title="Upload stats" stats={stats} />
       </div>
       <div className={`${styles.taskContainer} ${styles.bgGrey}`}>
-        <Title title="Pricing Plans" />
-        <PricingPlan arr={plans} />
+        <h2 className={styles.title}>Pricing Plans</h2>
+        <PricingPlan plans={plans} />
       </div>
       <div className={styles.taskContainer}>
-        <Title title="Transactions History" />
+        <h2 className={styles.title}>Transactions History</h2>
         <TransactionHistory items={transactions} />
       </div>
     </div>
